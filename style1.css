@@ -1,0 +1,222 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 100vh;
+    /* background-color: #43AFFC; */
+    background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722375/night.png") center;
+}
+.wrapper{
+    background: #ffffff75;
+    width: 25em;
+    border-radius: 8px;
+    box-shadow: 5px 6px 10px rgba(71, 234, 240, 0.904);
+}
+.wrapper header{
+    font-family: 'Merriweather', serif;
+    color: #ffffff;
+    /* color: #43AFFC; */
+    font-size: 32px;
+    font-weight: 500;
+    padding: 16px 16px;
+    /* border-bottom: 1px solid #43AFFC; */
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.wrapper header i{
+  cursor: pointer;
+  color: rgb(39, 91, 100);
+  font-size: 0px;
+  margin-right: 15px;
+  padding-top: 4px;    
+  float: left;
+}
+.wrapper header .time{
+    color: #ffffff;
+    padding-right: 4px;
+    padding-top: 8px;
+    float: right;
+    font-size: 20px;
+}
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+
+.input-part .info-txt{
+    display: none;
+    height: 55px;
+    text-align: center;
+    padding: 14px; 
+    font-size: 19px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.input-part .info-txt.error{
+    display: block;
+    color: rgb(138, 8, 8);
+    background-color: rgb(247, 203, 203);
+    border: 1px solid rgb(221, 184, 181) ;
+}
+.input-part .info-txt.pending{
+    display: block;
+    color: rgb(0, 75, 25);
+    background-color: rgb(213, 253, 220);
+    border: 1px solid rgb(162, 206, 121) ;
+}
+.input-part input,button{
+    width: 100%;
+    height: 55px;
+    border: 0cm;
+    outline: none;
+    font-size: 18px;
+   border-radius: 8px;
+}
+.input-part input{
+    background: rgba(255, 255, 255, 0.925);
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.input-part input:is(:focus, :valid){
+    background: white;
+    border: 2px solid #43AFFC;
+}
+
+.input-part .enterBtn{
+    cursor: pointer;
+    color: white;
+    background-color: #43AFFC;
+    margin-top: 15px;
+}
+
+.input-part .seperator{
+    height: 1px;
+    width: 100%;
+    margin:  25px 0px;
+    background: rgb(233, 232, 232);
+    /* background: transparent; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seperator::before{
+    content: "or";
+    color: rgb(150, 140, 140);
+    padding: 0px 16px;
+    background: #ffffff;
+    border-radius: 40px;
+    font-size: 22px;
+    
+}
+.input-part button{
+    cursor: pointer;
+    color: white;
+    background-color: #43AFFC;
+}
+
+
+.wrapper .weather-part{
+    margin: 30px 0 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+.weather-part .weather{
+    text-transform: capitalize;
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+.weather-part .location{
+    font-size: 21px;
+    text-align: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border-top: 1px solid #ccc; */
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+  .bottom-details .column{
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .column i{
+    /* color: #5DBBFF; */
+    color: #253641;
+    font-size: 40px;
+  }
+  .column.humidity{
+    border-left: 1px solid rgb(255, 255, 255);
+  }
+  .column .details{
+    margin-left: 3px;
+  }
+  .details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+    margin-bottom: 4px;
+  }
+  .details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+  }
+  .column .details p{
+    font-size: 14px;
+    margin-top: -6px;
+  }
+  .humidity i{
+    font-size: 37px;
+  }

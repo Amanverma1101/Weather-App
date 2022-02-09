@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather News App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header><i class="material-icons icon">arrow_back</i>Weather App
+        <div class="time">02:35 AM</div>
+        </header>
+        <section class="input-part">
+            <p class="info-txt">Please enter a valid City name</p>
+            <input type="text" placeholder="Enter City Name" required>
+            <button class="enterBtn">Enter</button>
+            <div class="seperator"></div>
+            <button class="GPS">Get Device Location</button>
+        </section>
+        <section class="weather-part">
+            <img src="Weather Icons/cloud.svg" alt="Weather Icon">
+            <div class="temp">
+                <span class="numb">17</span>
+                <span class="deg">&#176;</span>C
+            </div>
+            <div class="weather">broken clouds</div>
+            <div class="location">
+                <i class="material-icons icon">room</i>
+                <span>Bangalore, Karnataka</span>
+            </div>
+            <div class="bottom-details">
+                <div class="column feels">
+                    <i class="material-icons icon">device_thermostat</i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb">17</span>
+                            <span class="deg">&#176;</span>C
+                        </div>
+                        <p>Feels Like</p>
+                    </div>
+                </div>
+                <div class="column humidity">
+                    <i class="material-icons icon">invert_colors</i>
+                    <div class="details">
+                        <span class="numb">84</span>%  
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script src="script1.js"></script>
+
+</html>
